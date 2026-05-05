@@ -50,6 +50,272 @@
         }
         .nav-link:hover::after { width: 100%; }
 
+        /* Gallery Hover Effects */
+        .gallery-img-container { overflow: hidden; position: relative; cursor: pointer; }
+        .gallery-img-container img { transition: transform 0.7s ease; }
+        .gallery-img-container:hover img { transform: scale(1.05); }
+        .play-btn {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 60px; height: 60px; background: rgba(255,255,255,0.9); border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; transition: all 0.3s ease;
+        }
+        .gallery-img-container:hover .play-btn { background: var(--color-gold); color: white; transform: translate(-50%, -50%) scale(1.1); }
+        
+        /* Carousel Styles */
+        .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-slide { min-width: 100%; }
+        .carousel-btn { transition: all 0.3s ease; }
+        .carousel-btn:hover { color: var(--color-gold); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center px-6 py-8 md:px-16 absolute w-full z-50 text-white">
+        <div class="text-2xl font-bold tracking-[0.3em] uppercase">Safi's</div>
+        <div class="hidden lg:flex space-x-8 uppercase text-xs font-medium tracking-[0.2em]">
+            <a href="#sanctuary" class="nav-link">Sanctuary</a>
+            <a href="#clinical" class="nav-link">MedSpa</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+        </div>
+        <a href="#booking" class="border border-white/50 px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-[--color-slate] transition-colors">Secure a Time</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex flex-col justify-center px-6 md:px-20 pt-20">
+        <div class="max-w-3xl text-white">
+            <span class="uppercase tracking-[0.4em] text-xs mb-6 block text-[--color-gold] font-bold">Wuse II, Abuja • Open Until 10 PM</span>
+            <h1 class="text-5xl md:text-7xl mb-8 leading-[1.1] font-semibold">
+                Abuja’s Best Kept Secret for the <br><span class="italic text-[--color-gold] font-normal">Executive Glow.</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light leading-relaxed mb-10 text-gray-200 max-w-2xl">
+                Experience the sanctuary where luxury meets medical precision. Clinical results, wrapped in absolute serenity.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="https://wa.me/2348000000000?text=Hello%20Safi's%20Spa,%20I'd%20like%20to%20book%20a%20session." target="_blank" class="btn-primary px-10 py-5 text-sm text-center">Book Your Sanctuary</a>
+                <a href="#clinical" class="border border-white/30 backdrop-blur-sm px-10 py-5 text-sm uppercase tracking-widest font-medium hover:bg-white/10 text-center transition-colors">View Clinical Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Hook -->
+    <section id="sanctuary" class="py-24 px-6 md:px-20 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 pr-0 md:pr-12">
+                <h2 class="text-4xl md:text-5xl leading-tight text-[--color-slate]">Abuja is fast and demanding. <br><span class="italic font-light text-gray-500">You deserve a space that isn't.</span></h2>
+                <div class="w-16 h-1 bg-[--color-gold]"></div>
+                <p class="text-gray-600 leading-loose text-lg font-light">
+                    At Safi’s Spa, we don’t just provide 'massages'—we offer a total executive reset. From our indoor heated pool to our signature therapies, every minute is designed to help you unplug, recover, and emerge as the best version of yourself.
+                </p>
+                <div class="flex items-center space-x-4 pt-4 text-sm font-semibold tracking-widest uppercase text-[--color-slate]">
+                    <span class="text-[--color-gold]">✔</span> <span>Global Standard Therapists</span>
+                </div>
+                <div class="flex items-center space-x-4 text-sm font-semibold tracking-widest uppercase text-[--color-slate]">
+                    <span class="text-[--color-gold]">✔</span> <span>Late Night Executive Hours (10 PM)</span>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1000" alt="Spa Sanctuary" class="w-full h-[500px] object-cover shadow-2xl rounded-sm">
+                <div class="absolute -bottom-8 -left-8 bg-white p-6 shadow-xl hidden md:block">
+                    <p class="serif italic text-2xl text-[--color-slate]">"Artful Serenity."</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-2">— Abuja Elite Wellness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Gallery -->
+    <section id="gallery" class="py-20 px-6 md:px-20 bg-[--color-light] border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="uppercase tracking-widest text-xs font-bold text-[--color-gold] mb-4 block">Visual Proof</span>
+                    <h2 class="text-4xl text-[--color-slate]">Inside <span class="italic">The Sanctuary</span></h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="md:col-span-2 md:row-span-2 gallery-img-container rounded-sm shadow-md h-[300px] md:h-full relative">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=1200" alt="Safi Spa Video Tour" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="play-btn shadow-lg">
+                        <svg class="w-8 h-8 ml-1 text-[--color-slate]" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </div>
+                </div>
+                
+                <div class="gallery-img-container rounded-sm shadow-md h-[250px]">
+                    <img src="https://images.unsplash.com/photo-1519415510236-8657b2232a23?auto=format&fit=crop&q=80&w=800" alt="Treatment Room" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-img-container rounded-sm shadow-md h-[250px]">
+                    <img src="https://images.unsplash.com/photo-1570172619644-defd70cb99ce?auto=format&fit=crop&q=80&w=800" alt="Facial Treatment" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-img-container rounded-sm shadow-md h-[250px] md:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1560067174-c5a3a8f37060?auto=format&fit=crop&q=80&w=1200" alt="Indoor Heated Pool" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-img-container rounded-sm shadow-md h-[250px]">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" alt="Relaxation Setup" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical MedSpa Services -->
+    <section id="clinical" class="py-24 px-6 md:px-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="uppercase tracking-widest text-xs font-bold text-[--color-gold] mb-4 block">The Clinical Menu</span>
+                <h2 class="text-4xl md:text-5xl mb-6 text-[--color-slate]">The Bridge Between <br><span class="italic">Beauty & Science</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="medspa-card p-10 flex flex-col h-full shadow-lg bg-[--color-light]">
+                    <h3 class="text-2xl mb-4 text-[--color-slate]">The Luminous Glow Ritual</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                        Our premier high-ticket bundle. A comprehensive facial and body rejuvenation protocol designed for immediate, camera-ready radiance.
+                    </p>
+                    <div class="border-t border-gray-200 pt-6 mt-auto">
+                        <span class="text-[--color-gold] serif text-2xl italic">₦125,000</span>
+                    </div>
+                </div>
+
+                <div class="medspa-card p-10 flex flex-col h-full shadow-lg bg-[--color-light]">
+                    <h3 class="text-2xl mb-4 text-[--color-slate]">Signature 4-Hand Therapy</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                        Two world-class therapists working in perfect synchronization. The ultimate neurological distraction to force your mind into deep relaxation.
+                    </p>
+                    <div class="border-t border-gray-200 pt-6 mt-auto flex justify-between items-center">
+                        <span class="text-[--color-slate] text-xs uppercase tracking-widest font-bold">Global Standard</span>
+                    </div>
+                </div>
+
+                <div class="medspa-card p-10 flex flex-col h-full shadow-lg bg-[--color-light]">
+                    <h3 class="text-2xl mb-4 text-[--color-slate]">Clinical Lymphatic Drainage</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                        High-demand executive wellness. Reduces inflammation, detoxifies the body, and accelerates recovery from high-stress lifestyles.
+                    </p>
+                    <div class="border-t border-gray-200 pt-6 mt-auto">
+                        <span class="text-[--color-slate] text-xs uppercase tracking-widest font-bold">Medical Grade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Carousel -->
+    <section id="reviews" class="py-24 bg-[--color-slate] text-white text-center px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto relative">
+            <h2 class="uppercase tracking-widest text-xs font-bold text-[--color-gold] mb-12">Client Experiences</h2>
+            <div class="overflow-hidden relative mt-10">
+                <div id="carouselTrack" class="carousel-track">
+                    <div class="carousel-slide px-4">
+                        <div class="flex justify-center text-[--color-gold] mb-6 text-lg">★★★★★</div>
+                        <p class="font-light text-xl md:text-2xl leading-relaxed mb-8">"The atmosphere is incredible. I had my session with Vera, and her professionalism was unmatched."</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-70">— Sarah O.</p>
+                    </div>
+                    <div class="carousel-slide px-4">
+                        <div class="flex justify-center text-[--color-gold] mb-6 text-lg">★★★★★</div>
+                        <p class="font-light text-xl md:text-2xl leading-relaxed mb-8">"Miriam is a highly rated therapist for a reason. The indoor heated pool before the massage was life-changing."</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-70">— Amina M.</p>
+                    </div>
+                    <div class="carousel-slide px-4">
+                        <div class="flex justify-center text-[--color-gold] mb-6 text-lg">★★★★★</div>
+                        <p class="font-light text-xl md:text-2xl leading-relaxed mb-8">"Their late-night availability is a lifesaver for busy executives. A world-class wellness retreat."</p>
+                        <p class="text-xs uppercase tracking-widest font-bold opacity-70">— Fatima D.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center space-x-6 mt-12">
+                <button id="prevBtn" class="carousel-btn text-white opacity-50 hover:opacity-100 p-2 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <div class="flex space-x-2 items-center" id="carouselDots"></div>
+                <button id="nextBtn" class="carousel-btn text-white opacity-50 hover:opacity-100 p-2 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="booking" class="bg-[--color-light] text-[--color-slate] pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 mb-16">
+            <div>
+                <h2 class="text-4xl md:text-5xl serif italic mb-8">Ready for the <br>Safi Experience?</h2>
+                <div class="space-y-4 mb-10">
+                    <p class="flex items-center text-sm"><strong class="uppercase tracking-widest w-24 text-[--color-gold]">Hours:</strong> Monday — Sunday, 09:00 AM — 10:00 PM</p>
+                    <p class="flex items-center text-sm"><strong class="uppercase tracking-widest w-24 text-[--color-gold]">Address:</strong> No. 4 Agadez Crescent, Wuse 2, Abuja</p>
+                    <p class="flex items-center text-sm"><strong class="uppercase tracking-widest w-24 text-[--color-gold]">Contact:</strong> +234 800 000 0000</p>
+                </div>
+                <a href="https://wa.me/2348000000000?text=I'm%20on%20the%20website%20and%20want%20to%20book%20a%20Glow%20Ritual." target="_blank" class="btn-primary px-10 py-5 text-sm inline-block shadow-lg text-center w-full sm:w-auto">Confirm Booking via WhatsApp</a>
+            </div>
+            <div class="bg-gray-200 h-[300px] rounded-sm overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.851965253818!2d7.472714!3d9.083321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a5392e66b8b%3A0xc6222b4676465492!2sAgadez%20Crescent%2C%20Wuse%202%2C%20Abuja!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="text-center text-[10px] text-gray-500 tracking-[0.2em] uppercase font-bold border-t border-gray-300 pt-8">
+            &copy; 2026 Safi's Spa Wuse 2 | Digital Infrastructure by Digital Kato
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carousel Logic
+            const track = document.getElementById('carouselTrack');
+            const slides = Array.from(track.children);
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const dotsContainer = document.getElementById('carouselDots');
+            let currentIndex = 0;
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = `w-2 h-2 rounded-full bg-white/30 cursor-pointer transition-all duration-300`;
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            function goToSlide(index) {
+                currentIndex = index;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                Array.from(dotsContainer.children).forEach((d, i) => {
+                    d.style.backgroundColor = i === index ? '#D4AF37' : 'rgba(255,255,255,0.3)';
+                    d.style.transform = i === index ? 'scale(1.5)' : 'scale(1)';
+                });
+            }
+
+            nextBtn.addEventListener('click', () => goToSlide((currentIndex + 1) % slides.length));
+            prevBtn.addEventListener('click', () => goToSlide((currentIndex - 1 + slides.length) % slides.length));
+            
+            // Auto-play
+            let slideInterval = setInterval(() => goToSlide((currentIndex + 1) % slides.length), 5000);
+            
+            // Reset interval on manual click
+            [nextBtn, prevBtn].forEach(btn => btn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(() => goToSlide((currentIndex + 1) % slides.length), 5000);
+            }));
+
+            goToSlide(0);
+        });
+    </script>
+</body>
+</html>            background-color: #B5952F;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .medspa-card { background: white; border-top: 4px solid var(--color-gold); transition: all 0.4s ease; }
+        .medspa-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.08); transform: translateY(-5px); }
+
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 1px;
+            bottom: -4px; left: 0; background-color: var(--color-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
         .gallery-img-container { overflow: hidden; position: relative; cursor: pointer; }
         .gallery-img-container img { transition: transform 0.7s ease; }
         .gallery-img-container:hover img { transform: scale(1.05); }
