@@ -53,6 +53,113 @@
         /* Carousel Styles */
         .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
         .carousel-slide { min-width: 100%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="flex justify-between items-center px-6 py-8 md:px-16 absolute w-full z-50 text-white">
+        <div class="text-2xl font-bold tracking-[0.3em] uppercase">Safi's</div>
+        <div class="hidden lg:flex space-x-8 uppercase text-xs font-medium tracking-[0.2em]">
+            <a href="#sanctuary" class="nav-link">Sanctuary</a>
+            <a href="#clinical" class="nav-link">MedSpa</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+        </div>
+        <a href="https://wa.me/2348032470735?text=Hello%20Safi's%20Spa,%20I'm%20viewing%20your%20Executive%20Portal.%20I%20would%20like%20to%20request%20a%20concierge%20booking.%0A%0AService:%20[Enter%20Service]%0APreferred%20Date:%20[Enter%20Date]" target="_blank" class="border border-white/50 px-6 py-3 text-xs font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-[--color-slate] transition-colors text-center hidden md:inline-block">Secure a Time</a>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex flex-col justify-center px-6 md:px-20 pt-20">
+        <div class="max-w-3xl text-white">
+            <span class="uppercase tracking-[0.4em] text-xs mb-6 block text-[--color-gold] font-bold">Wuse II, Abuja • Open Until 10 PM</span>
+            <h1 class="text-5xl md:text-7xl mb-8 leading-[1.1] font-semibold">
+                Abuja’s Best Kept Secret for the <br><span class="italic text-[--color-gold] font-normal">Executive Glow.</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light leading-relaxed mb-10 text-gray-200 max-w-2xl">
+                Experience the sanctuary where luxury meets medical precision. Clinical results, wrapped in absolute serenity.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="https://wa.me/2348032470735?text=Hello%20Safi's%20Spa,%20I'm%20viewing%20your%20Executive%20Portal.%20I%20would%20like%20to%20request%20a%20concierge%20booking.%0A%0AService:%20[Enter%20Service]%0APreferred%20Date:%20[Enter%20Date]" target="_blank" class="btn-primary px-10 py-5 text-sm text-center">Book Your Sanctuary</a>
+                <a href="#clinical" class="border border-white/30 backdrop-blur-sm px-10 py-5 text-sm uppercase tracking-widest font-medium hover:bg-white/10 text-center transition-colors">View Clinical Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sanctuary" class="py-24 px-6 md:px-20 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 pr-0 md:pr-12">
+                <h2 class="text-4xl md:text-5xl leading-tight text-[--color-slate]">Abuja is fast and demanding. <br><span class="italic font-light text-gray-500">You deserve a space that isn't.</span></h2>
+                <div class="w-16 h-1 bg-[--color-gold]"></div>
+                <p class="text-gray-600 leading-loose text-lg font-light">
+                    At Safi’s Spa, we don’t just provide 'massages'—we offer a total executive reset. From our indoor heated pool to our signature therapies, every minute is designed to help you unplug, recover, and emerge as the best version of yourself.
+                </p>
+                <div class="flex items-center space-x-4 pt-4 text-sm font-semibold tracking-widest uppercase text-[--color-slate]">
+                    <span class="text-[--color-gold]">✔</span> <span>Global Standard Therapists</span>
+                </div>
+                <div class="flex items-center space-x-4 text-sm font-semibold tracking-widest uppercase text-[--color-slate]">
+                    <span class="text-[--color-gold]">✔</span> <span>Late Night Executive Hours (10 PM)</span>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1000" alt="Spa Sanctuary" class="w-full h-[500px] object-cover shadow-2xl rounded-sm">
+            </div>
+        </div>
+    </section>
+
+    <footer id="booking" class="bg-[--color-light] text-[--color-slate] pt-24 pb-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 mb-16">
+            <div>
+                <h2 class="text-4xl md:text-5xl serif italic mb-8">Ready for the <br>Safi Experience?</h2>
+                <div class="space-y-4 mb-10 text-sm opacity-80">
+                    <p><strong>Address:</strong> No. 4 Agadez Crescent, Wuse 2, Abuja</p>
+                    <p><strong>Direct Line:</strong> 0803 247 0735</p>
+                    <p><strong>Hours:</strong> 09:00 AM — 10:00 PM Daily</p>
+                </div>
+                <a href="https://wa.me/2348032470735?text=Hello%20Safi's%20Spa,%20I'd%20like%20to%20book%20a%20session." target="_blank" class="btn-primary px-10 py-5 text-sm inline-block shadow-lg">Confirm Booking via WhatsApp</a>
+            </div>
+            <div class="bg-gray-200 h-[300px] rounded-sm">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.851965253818!2d7.472714!3d9.083321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a5392e66b8b%3A0xc6222b4676465492!2sAgadez%20Crescent%2C%20Wuse%202%2C%20Abuja!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="text-center text-[10px] text-gray-500 tracking-[0.2em] uppercase font-bold border-t border-gray-300 pt-8">
+            © 2026 Safi's Spa | Digital Infrastructure by <span class="text-[--color-gold]">Digital Kato</span>
+        </div>
+    </footer>
+
+</body>
+</html>                        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .btn-primary {
+            background-color: var(--color-gold);
+            color: white;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #B5952F;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .medspa-card { background: white; border-top: 4px solid var(--color-gold); transition: all 0.4s ease; }
+        .medspa-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.08); transform: translateY(-5px); }
+
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 1px;
+            bottom: -4px; left: 0; background-color: var(--color-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Carousel Styles */
+        .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-slide { min-width: 100%; }
         .carousel-btn { transition: all 0.3s ease; }
     </style>
 </head>
